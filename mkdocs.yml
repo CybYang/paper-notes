@@ -1,0 +1,122 @@
+site_name: Paper Notes
+site_description: >-
+  Research paper reading notes on robotics, embodied AI, motion generation,
+  and related topics.
+site_url: https://cybyang.github.io/paper-notes/
+repo_url: https://github.com/CybYang/paper-notes
+repo_name: CybYang/paper-notes
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; CybYang
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: zh
+  logo: assets/mark.svg
+  favicon: assets/mark.svg
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.path
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.action.edit
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+nav:
+  - 首页: index.md
+  - 论文库: tags.md
+  - 关于: about.md
+
+exclude_docs: |
+  templates/
+
+plugins:
+  - search:
+      lang:
+        - en
+        - zh
+  - blog:
+      blog_dir: .
+      post_dir: papers
+      post_url_format: "papers/{file}"
+      archive: false
+      categories: false
+      post_excerpt: required
+      post_excerpt_max_authors: 0
+      post_excerpt_max_categories: 0
+      post_readtime: false
+      pagination_per_page: 10
+      pagination_if_single_page: false
+  - tags
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 2-4
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - javascripts/paper-filter.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  generator: false
+  profile:
+    name: Haoyang Sun
+    handle: CybYang
+    avatar: assets/profile-avatar.png
+    bio: 记录机器人与具身智能方向的论文阅读、方法整理和个人思考。
+    interests:
+      - Robotics
+      - Embodied AI
+      - VLA
+    github: https://github.com/CybYang
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/CybYang
+      name: CybYang on GitHub

@@ -1,0 +1,60 @@
+{# Homepage layout: article feed with a compact author sidebar. #}
+{% extends "main.html" %}
+
+{% block container %}
+  <div class="md-content" data-md-component="content">
+    <div class="md-content__inner md-content__inner--blog">
+      <header class="md-typeset">
+        {{ page.content }}
+      </header>
+
+      {% set profile = config.extra.profile %}
+      <aside class="blog-profile md-typeset" aria-label="博主信息">
+        <div class="blog-profile__identity">
+          <img
+            class="blog-profile__avatar"
+            src="{{ profile.avatar | url }}"
+            alt="{{ profile.name }} 的头像"
+            width="96"
+            height="96"
+          >
+          <div>
+            <span class="blog-profile__label">Author</span>
+            <h2>{{ profile.name }}</h2>
+            <p class="blog-profile__handle">@{{ profile.handle }}</p>
+          </div>
+        </div>
+
+        <p class="blog-profile__bio">{{ profile.bio }}</p>
+
+        <div class="blog-profile__topics" aria-label="研究方向">
+          {% for interest in profile.interests %}
+            <span>{{ interest }}</span>
+          {% endfor %}
+        </div>
+
+        <a class="blog-profile__primary" href="{{ profile.github }}" target="_blank" rel="noopener">
+          {% include ".icons/fontawesome/brands/github.svg" %}
+          <span>Follow on GitHub</span>
+        </a>
+
+        <nav class="blog-profile__links" aria-label="个人链接">
+          <a href="{{ 'about/' | url }}">关于本站</a>
+        </nav>
+      </aside>
+
+      <div class="home-blog-layout">
+        <section class="home-blog-feed" aria-label="论文文章列表">
+          {% for post in posts %}
+            {% include "partials/post.html" %}
+          {% endfor %}
+          {% if pagination %}
+            {% block pagination %}
+              {% include "partials/pagination.html" %}
+            {% endblock %}
+          {% endif %}
+        </section>
+      </div>
+    </div>
+  </div>
+{% endblock %}

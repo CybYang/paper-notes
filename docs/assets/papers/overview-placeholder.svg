@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Paper overview placeholder</title>
+  <desc id="desc">A placeholder flow diagram showing observation, model, and action.</desc>
+  <rect width="640" height="360" rx="22" fill="#edf5f5"/>
+  <path d="M0 72h640M0 144h640M0 216h640M0 288h640M80 0v360M160 0v360M240 0v360M320 0v360M400 0v360M480 0v360M560 0v360" stroke="#0f766e" stroke-opacity=".07"/>
+  <text x="42" y="55" fill="#0f766e" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="700" letter-spacing="2.5">PAPER OVERVIEW</text>
+  <g font-family="IBM Plex Sans, sans-serif" text-anchor="middle">
+    <rect x="42" y="122" width="148" height="88" rx="14" fill="#fff" stroke="#cbd5e1"/>
+    <text x="116" y="158" fill="#64748b" font-size="12" font-weight="600" letter-spacing="1.2">INPUT</text>
+    <text x="116" y="184" fill="#10233d" font-size="18" font-weight="700">Observation</text>
+    <path d="M205 166h38" stroke="#14b8a6" stroke-width="3" stroke-linecap="round"/>
+    <path d="m235 157 10 9-10 9" fill="none" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="246" y="106" width="148" height="120" rx="14" fill="#10233d"/>
+    <text x="320" y="153" fill="#5eead4" font-size="12" font-weight="600" letter-spacing="1.2">METHOD</text>
+    <text x="320" y="183" fill="#fff" font-size="20" font-weight="700">Model</text>
+    <path d="M409 166h38" stroke="#14b8a6" stroke-width="3" stroke-linecap="round"/>
+    <path d="m439 157 10 9-10 9" fill="none" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="450" y="122" width="148" height="88" rx="14" fill="#fff" stroke="#cbd5e1"/>
+    <text x="524" y="158" fill="#64748b" font-size="12" font-weight="600" letter-spacing="1.2">OUTPUT</text>
+    <text x="524" y="184" fill="#10233d" font-size="18" font-weight="700">Action</text>
+    <text x="320" y="302" fill="#64748b" font-size="15">Replace this image with the paper's overview figure</text>
+  </g>
+</svg>

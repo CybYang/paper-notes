@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Paper Notes">
+  <path d="M9 8.5A4.5 4.5 0 0 1 13.5 4H35a4 4 0 0 1 4 4v31.5a4.5 4.5 0 0 0-4.5-4.5H13.5A4.5 4.5 0 0 0 9 39.5v-31Z" fill="#f8fafc"/>
+  <path d="M14 14h16M14 20h20M14 26h12" fill="none" stroke="#0f766e" stroke-linecap="round" stroke-width="2.5"/>
+  <circle cx="33" cy="27" r="4" fill="#2dd4bf"/>
+  <path d="M29.5 35H35" fill="none" stroke="#0f766e" stroke-linecap="round" stroke-width="2.5"/>
+</svg>
