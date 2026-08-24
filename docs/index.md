@@ -9,7 +9,7 @@ hide:
 <section class="site-cover">
   <div class="site-cover__inner">
     <div class="site-cover__copy">
-      <span class="site-cover__kicker"><i></i> Personal research archive</span>
+      <span class="site-cover__kicker"><i></i> CybYang's Blog</span>
       <h1>Paper<br><em>Notes.</em></h1>
       <p>阅读论文，整理方法，留下自己的判断。</p>
       <div class="site-cover__topics">
