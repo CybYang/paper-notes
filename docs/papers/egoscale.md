@@ -1,6 +1,6 @@
 ---
 title: EgoScale：大规模第一视角人类数据驱动的灵巧操作迁移
-date: 2026-08-25
+date: 2026-08-27
 description: 以三阶段训练流程为主线，梳理 EgoScale 如何从大规模第一视角人类视频学习操作先验，并将其迁移到高自由度灵巧机器人。
 tags:
   - Dexterous-Manipulation

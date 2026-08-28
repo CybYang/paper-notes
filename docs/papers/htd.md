@@ -1,6 +1,6 @@
 ---
 title: HTD：基于 Touch Dreaming 的触觉感知人形灵巧操作
-date: 2026-08-28
+date: 2026-07-31
 description: 以 LBC 训练、VR 数据采集、HTD 单阶段训练和真机部署为主线，梳理 Touch Dreaming 如何用于接触感知的人形灵巧操作。
 tags:
   - Dexterous-Manipulation

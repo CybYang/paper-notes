@@ -1,6 +1,6 @@
 ---
 title: HumanoidArena：第一视角层级式全身人形学习基准
-date: 2026-08-28
+date: 2026-07-30
 description: 以层级接口、Multi-GMT 数据采集、高层策略训练与受控评测为主线，梳理 HumanoidArena 的完整系统流程。
 tags:
   - Loco-Manipulation

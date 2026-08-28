@@ -1,6 +1,6 @@
 ---
 title: ω-0：面向人形机器人并发 Loco-Manipulation 的 Latent Predictive World Action Model
-date: 2026-08-26
+date: 2026-08-28
 description: 以三个训练阶段为主线，梳理 ω-0 如何学习 whole-body action semantics、构造 robot-executable action latent，并通过 latent future prediction 与 RTC 完成真实机器人闭环控制。
 tags:
   - Loco-Manipulation

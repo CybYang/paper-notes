@@ -1,6 +1,6 @@
 ---
 title: MotionWAM：面向实时人形 Loco-Manipulation 的世界动作模型
-date: 2026-08-28
+date: 2026-07-29
 description: 以三阶段训练流程为主线，梳理 MotionWAM 如何将视频世界模型的动态先验迁移到 Unitree G1 的统一全身动作空间，并实现实时闭环 loco-manipulation。
 tags:
   - Loco-Manipulation

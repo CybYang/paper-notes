@@ -1,6 +1,6 @@
 ---
 title: OpenHLM：面向全身人形 Loco-Manipulation 的 VLA 系统设计
-date: 2026-08-28
+date: 2026-07-28
 description: 以 Whole-Body Controller、VLA Design 与 Heterogeneous Co-Training 三个阶段为主线，梳理 OpenHLM 的数据采集、模型训练、动作接口与闭环推理流程。
 tags:
   - Loco-Manipulation
