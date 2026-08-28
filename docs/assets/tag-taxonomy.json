@@ -1,0 +1,82 @@
+{
+  "groups": [
+    {
+      "id": "task",
+      "label": "Task",
+      "label_zh": "任务",
+      "tags": [
+        "Dexterous-Manipulation",
+        "Loco-Manipulation",
+        "Whole-Body-Control",
+        "Locomotion",
+        "Human-Motion",
+        "Interaction"
+      ]
+    },
+    {
+      "id": "model",
+      "label": "Model",
+      "label_zh": "模型",
+      "tags": [
+        "VLA",
+        "VLM",
+        "Diffusion",
+        "Flow-Matching",
+        "DiT",
+        "Transformer",
+        "ACT"
+      ]
+    },
+    {
+      "id": "learning",
+      "label": "Learning",
+      "label_zh": "学习方法",
+      "tags": [
+        "Imitation-Learning",
+        "Reinforcement-Learning",
+        "Behavior-Cloning",
+        "Self-Supervised",
+        "Distillation"
+      ]
+    },
+    {
+      "id": "data",
+      "label": "Data",
+      "label_zh": "数据",
+      "tags": [
+        "Human-Data",
+        "Egocentric-Human-Data",
+        "Robot-Teleoperation",
+        "Video-Data",
+        "Simulation-Data",
+        "Synthetic-Data"
+      ]
+    },
+    {
+      "id": "transfer-training",
+      "label": "Transfer / Training",
+      "label_zh": "迁移与训练",
+      "tags": [
+        "Human-to-Robot-Transfer",
+        "Cross-Embodiment",
+        "Retargeting",
+        "Pretraining",
+        "Co-training",
+        "Fine-tuning"
+      ]
+    },
+    {
+      "id": "modality-hardware",
+      "label": "Modality / Hardware",
+      "label_zh": "模态与硬件",
+      "tags": [
+        "Vision",
+        "Language",
+        "Tactile",
+        "Dexterous-Hand",
+        "Gripper",
+        "Humanoid"
+      ]
+    }
+  ]
+}

@@ -57,6 +57,13 @@ Put overview figures under `docs/assets/papers/` and reference them before the
 `../assets/papers/my-paper-overview.png`. The figure then appears both in the
 homepage entry and in the full article.
 
+Choose tags from `docs/assets/tag-taxonomy.json` and keep their spelling,
+capitalization, and hyphens unchanged. The taxonomy groups tags by task, model,
+learning method, data, transfer/training, and modality/hardware; the website
+uses those groups to color tag chips and organize the filter dropdown. To add
+or remove an allowed tag, edit that JSON file. When removing or renaming a tag,
+also update any paper front matter that still uses it.
+
 ## GitHub Pages
 
 Pushes to `main` run `.github/workflows/deploy-pages.yml`, build the site, and

@@ -35,6 +35,8 @@ hide:
     <span>正在载入论文索引…</span>
   </div>
 
+  <div class="paper-tag-legend" aria-label="标签颜色分类"></div>
+
   <div class="paper-filter__results" aria-live="polite" aria-busy="true"></div>
 
   <noscript>

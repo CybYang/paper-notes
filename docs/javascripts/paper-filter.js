@@ -35,7 +35,11 @@
     const summary = createElement("p", "paper-result__summary", paper.summary);
     const tags = createElement("div", "paper-result__tags");
     tags.setAttribute("aria-label", "论文标签");
-    paper.tags.forEach((tag) => tags.append(createElement("span", "", tag)));
+    paper.tags.forEach((tag) => {
+      const tagElement = createElement("span", "", tag);
+      window.paperTagTaxonomy?.annotate(tagElement, tag);
+      tags.append(tagElement);
+    });
 
     card.append(eyebrow, title, summary, tags);
     return card;
@@ -50,11 +54,15 @@
     const tagSelect = root.querySelector("#paper-filter-tag");
     const resetButton = root.querySelector(".paper-filter__reset");
     const summary = root.querySelector(".paper-filter__summary");
+    const legend = root.querySelector(".paper-tag-legend");
     const results = root.querySelector(".paper-filter__results");
 
     try {
       const indexUrl = new URL("../search/search_index.json", window.location.href);
-      const response = await fetch(indexUrl);
+      const [response, taxonomyGroups] = await Promise.all([
+        fetch(indexUrl),
+        window.paperTagTaxonomy?.ready || Promise.resolve([]),
+      ]);
       if (!response.ok) throw new Error(`Search index returned ${response.status}`);
 
       const index = await response.json();
@@ -80,11 +88,44 @@
 
       tagSelect.replaceChildren();
       tagSelect.append(new Option(`全部标签（${papers.length}）`, ""));
-      [...tagCounts.keys()]
-        .sort((a, b) => a.localeCompare(b, "zh-CN", { sensitivity: "base" }))
-        .forEach((tag) => {
-          tagSelect.append(new Option(`${tag}（${tagCounts.get(tag)}）`, tag));
+      const groupedTags = new Set();
+      taxonomyGroups.forEach((group) => {
+        const tagsInUse = (group.tags || []).filter((tag) => tagCounts.has(tag));
+        if (!tagsInUse.length) return;
+
+        const optionGroup = document.createElement("optgroup");
+        optionGroup.label = `${group.label_zh} / ${group.label}`;
+        tagsInUse.forEach((tag) => {
+          groupedTags.add(tag);
+          optionGroup.append(new Option(`${tag}（${tagCounts.get(tag)}）`, tag));
         });
+        tagSelect.append(optionGroup);
+      });
+
+      const uncategorized = [...tagCounts.keys()]
+        .filter((tag) => !groupedTags.has(tag))
+        .sort((a, b) => a.localeCompare(b, "zh-CN", { sensitivity: "base" }));
+      if (uncategorized.length) {
+        const optionGroup = document.createElement("optgroup");
+        optionGroup.label = "未分类 / Other";
+        uncategorized.forEach((tag) => {
+          optionGroup.append(new Option(`${tag}（${tagCounts.get(tag)}）`, tag));
+        });
+        tagSelect.append(optionGroup);
+      }
+
+      if (legend) {
+        legend.replaceChildren();
+        taxonomyGroups.forEach((group) => {
+          const item = createElement(
+            "span",
+            "",
+            `${group.label_zh} · ${group.label}`
+          );
+          item.dataset.tagCategory = group.id;
+          legend.append(item);
+        });
+      }
 
       const render = () => {
         const query = normalize(queryInput.value);
@@ -109,6 +150,7 @@
 
         if (filtered.length) {
           filtered.forEach((paper) => results.append(createPaperCard(paper)));
+          window.paperTagTaxonomy?.apply(results);
         } else {
           const empty = createElement("div", "paper-filter__empty");
           empty.append(

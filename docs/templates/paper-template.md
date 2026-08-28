@@ -2,9 +2,12 @@
 title: 论文名称
 date: YYYY-MM-DD
 description: 用一句话概括这篇笔记的内容。
+# 从 docs/assets/tag-taxonomy.json 中选择标签，保持大小写和连字符完全一致。
+# 每篇只选能帮助检索的核心标签，不需要把相关词全部填满。
 tags:
-  - 研究方向
-  - 方法关键词
+  - Dexterous-Manipulation
+  - VLA
+  - Imitation-Learning
 ---
 
 # 论文名称
@@ -35,7 +38,7 @@ tags:
 
 ## 二、核心方法
 
-先用自己的话说明整体思路，再根据论文结构补充关键模块或步骤。不必为了套模板强行拆成固定阶段。
+先用自己的话说明整体思路，再根据论文结构补充关键模块或步骤。不必为了套模板强行拆成固定阶段；如果论文的训练 recipe 是理解重点，可以像 Stage I / II / III 一样详细展开。
 
 ### 2.1 关键模块
 

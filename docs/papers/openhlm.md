@@ -5,7 +5,9 @@ description: OpenHLM 从全身遥操作、VLA 策略设计和异构共训练三�
 tags:
   - Humanoid
   - VLA
-  - Whole-body Control
+  - Whole-Body-Control
+  - Loco-Manipulation
+  - Co-training
 ---
 
 # OpenHLM：全身人形机器人移动操作的经验配方
